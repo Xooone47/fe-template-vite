@@ -1,13 +1,15 @@
 {
-  "name": "fexpy",
+  "name": "fe-template-vite",
   "version": "0.0.1",
   "description": "To build a react app quickly",
   "scripts": {
     "start": "vite",
     "clean": "rm -rf build/",
     "build": "sh ./scripts/build.sh",
+    "build:preview": "sh ./scripts/build-preview.sh",
     "test": "jest --config ./configs/jest.config.js",
     "test:watch": "jest --config ./configs/jest.config.js --watch",
+    "preview": "vite preview -c vite.config.js --outDir dist",
     "lint": "yarn lint-es && yarn lint-type",
     "lint-es": "eslint src --ext .tsx,.ts,.js,.jsx -c .eslintrc.js --ignore-path ./configs/.eslintignore",
     "lint-type": "tsc",
@@ -57,6 +59,7 @@
     "babel-plugin-react-require": "^3.0.0",
     "babel-plugin-react-transform": "^3.0.0",
     "cookie-parser": "^1.4.3",
+    "cross-env": "^7.0.3",
     "css-hot-loader": "^1.4.4",
     "css-loader": "^5.2.6",
     "enzyme": "^3.9.0",
@@ -134,9 +137,6 @@
       "eslint -c .eslintrc.js --ignore-path ./configs/.eslintignore --fix"
     ]
   },
-  "browserslist": [
-    "defaults"
-  ],
   "engines": {
     "node": ">= 16.16.0",
     "pnpm": "^8.0.0"

@@ -30,9 +30,8 @@ export default defineConfig({
                 assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
                 sourcemap: ['release', 'live'].includes(__ENV__) ? 'hidden' : true,
                 manualChunks: {
-                    react: ['react', 'react-dom'],
-                    'react-ui': ['ssc-ui-react', 'react-pro-components'],
-                    echarts: ['echarts'],
+                    react: ['react', 'react-dom', 'react-router-dom'],
+                    'antd': ['antd'],
                     lodash: ['lodash'],
                     // common: ['node_modules'],
                 },

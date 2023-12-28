@@ -10,6 +10,6 @@ rm -rf dist
 
 # npx patch-package
 
-NODE_OPTIONS=--max-old-space-size=4096 cross-env vite build
+NODE_OPTIONS=--max-old-space-size=4096 cross-env env=test vite build
 
 echo "Done: Build Preview."
