@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "target": "es2018",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */
+    "target": "es2020",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */
     "module": "esnext",                       /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     "lib": [
-      "es2018",
+      "es2020",
       "dom",
       "dom.iterable",
       "esnext"
@@ -13,9 +13,9 @@
     "noEmit": true,
     "noUnusedLocals": false,
     "noFallthroughCasesInSwitch": true,
-    "jsx": "preserve",                           /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+    "jsx": "react-jsx",                           /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
     "sourceMap": true,                        /* Generates corresponding '.map' file. */
-    "outDir": "./build",                       /* Redirect output structure to the directory. */
+    "outDir": "./dist",                       /* Redirect output structure to the directory. */
     "isolatedModules": true,                  /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
@@ -24,7 +24,7 @@
     "noImplicitAny": false,
     "noImplicitThis": true,                   /* Raise error on 'this' expressions with an implied 'any' type. */
     "noImplicitReturns": true,                /* Report error when not all code paths in function return a value. */
-    "moduleResolution": "node",               /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    "moduleResolution": "bundler",               /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
     "baseUrl": ".",                       /* Base directory to resolve non-absolute module names. */
     "paths": {                            /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
       "@/*": ["src/*"]
@@ -39,9 +39,9 @@
     ".eslintrc.js",
     "configs",
     "scripts",
+    "./src/types/global.d.ts"
   ],
   "exclude": [
     "node_modules"
-  ],
-  "includes": ["./src/types/global.d.ts"]
+  ]
 }

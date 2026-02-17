@@ -3,51 +3,61 @@
  * @author Deland
  */
 module.exports = {
-    'plugins': [
+    plugins: [
         [
             '@babel/plugin-proposal-decorators',
             {
-                'legacy': true,
+                legacy: true,
             },
         ],
         '@babel/plugin-proposal-optional-chaining', // foo?.bar?.a
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-proposal-object-rest-spread',
-        'react-require',
         [
             'import',
             {
-                'libraryName': 'antd',
-                'libraryDirectory': 'es',
-                'style': true,
+                libraryName: 'antd',
+                libraryDirectory: 'es',
+                style: true,
             },
         ],
         [
             '@babel/plugin-transform-runtime',
             {
-                'regenerator': true,
+                regenerator: true,
             },
         ],
     ],
-    'presets': [
-        '@babel/preset-env',
-        '@babel/preset-react',
+    presets: [
+        [
+            '@babel/preset-env',
+            {
+                useBuiltIns: 'usage',
+                corejs: 3,
+            },
+        ],
+        [
+            '@babel/preset-react',
+            {
+                runtime: 'automatic',
+            },
+        ],
         [
             '@babel/preset-typescript',
             {
-                'isTSX': true,
-                'allExtensions': true,
+                isTSX: true,
+                allExtensions: true,
             },
         ],
     ],
-    'env': {
-        'test': {
-            'plugins': [
+    env: {
+        test: {
+            plugins: [
                 [
                     'import',
                     {
-                        'libraryName': 'antd',
-                        'style': false,
+                        libraryName: 'antd',
+                        style: false,
                     },
                 ],
             ],
