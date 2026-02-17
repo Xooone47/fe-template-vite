@@ -6,7 +6,6 @@ import {FC, useCallback, useState} from 'react';
 import {Button} from 'antd';
 import SuccessSvg from '@/assets/success.svg?react';
 import {useCurrentUser} from '@/hooks';
-// import {fetchUserInfo} from '@/actions';
 import ConcurrentDemo from './ConcurrentDemo';
 import RecoilDemo from './RecoilDemo';
 import styles from './index.module.less';
