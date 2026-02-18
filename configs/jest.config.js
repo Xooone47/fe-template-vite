@@ -3,7 +3,6 @@ module.exports = {
     // testURL: 'http://localhost',
     rootDir: '../',
     modulePaths: ['<rootDir>/src/'],
-    setupFiles: ['<rootDir>/configs/enzymeSetup.js'],
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
     moduleNameMapper: {
         // eslint-disable-next-line max-len

@@ -10,17 +10,7 @@ module.exports = {
                 legacy: true,
             },
         ],
-        '@babel/plugin-proposal-optional-chaining', // foo?.bar?.a
         '@babel/plugin-proposal-class-properties',
-        '@babel/plugin-proposal-object-rest-spread',
-        [
-            'import',
-            {
-                libraryName: 'antd',
-                libraryDirectory: 'es',
-                style: true,
-            },
-        ],
         [
             '@babel/plugin-transform-runtime',
             {
@@ -50,17 +40,4 @@ module.exports = {
             },
         ],
     ],
-    env: {
-        test: {
-            plugins: [
-                [
-                    'import',
-                    {
-                        libraryName: 'antd',
-                        style: false,
-                    },
-                ],
-            ],
-        },
-    },
 };
