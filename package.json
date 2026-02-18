@@ -14,7 +14,8 @@
     "lint-es": "eslint src --ext .tsx,.ts,.js,.jsx -c .eslintrc.js --ignore-path ./configs/.eslintignore",
     "lint-type": "tsc",
     "analyze": "vite build --report",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky"
   },
   "bin": {
     "fe": "bin/index.js"
@@ -77,6 +78,7 @@
     "commander": "^12.0.0",
     "copy-to-clipboard": "^3.3.3",
     "core-js": "^3.36.0",
+    "dayjs": "^1.11.19",
     "immer": "^10.1.1",
     "lodash": "^4.17.21",
     "lodash-decorators": "^6.0.0",
@@ -87,12 +89,6 @@
     "typescript": "^5.4.3",
     "use-immer": "^0.11.0",
     "zustand": "^4.5.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "pnpm lint && pnpm test",
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [

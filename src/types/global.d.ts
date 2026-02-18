@@ -1,7 +1,7 @@
 /* eslint-disable init-declarations */
 /**
  * @file global modules
- * @author Deland
+ * @author Dylan
  */
 
 declare module '*.less' {

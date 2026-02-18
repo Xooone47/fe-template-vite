@@ -1,6 +1,6 @@
 /**
  * @file enzyme settings
- * @author Deland
+ * @author Dylan
  */
 
 import Enzyme from 'enzyme';
